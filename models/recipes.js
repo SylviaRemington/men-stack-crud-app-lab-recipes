@@ -7,7 +7,7 @@ const recipeSchema = new mongoose.Schema({
     description: { type: String, required: false},
     ingredients: { type: String, required: true},
     instructions: { type: String, required: true},
-    isFavoriteRecipe: { type: Boolean, default: false},
+    isFavoriteRecipe: { type: Boolean, default: false}, //so can create favorite recipes page of favs go-to
 });
 
 // Register the model
