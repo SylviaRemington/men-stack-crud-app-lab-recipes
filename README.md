@@ -77,4 +77,4 @@ PUT	/plants/:id	Update	Updates a specific plant by its ID
 DELETE	/plants/:id	Destroy	Deletes a specific plant by its ID
 
 
-# Happy coding!
+## Happy coding!
