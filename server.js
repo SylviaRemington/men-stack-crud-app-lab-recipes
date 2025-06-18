@@ -9,7 +9,6 @@ const mongoose = require('mongoose');
 //Importing the model into server.js
 const Recipe = require('./models/recipes.js')
 
-
 // Creating the app using Express, so can build out routes, handle requests & send responses
 const app = express();
 
@@ -26,9 +25,14 @@ mongoose.connection.on('connected', () => {
 //     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
 // });
 
+// GET ROUTES
 app.get('/', async (req, res) => {
     res.render('index.ejs');
 });
+
+
+// POST ROUTES
+
 
 
 // Starts the app and tells it to listen for requests on PORT (3000)
