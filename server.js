@@ -6,8 +6,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 //Do we not need require ejs because express automatically is designed to find it? I think so, but not totally sure.
 
+
 //Importing the model into server.js
 const Recipe = require('./models/recipes.js')
+
 
 // Creating the app using Express, so can build out routes, handle requests & send responses
 const app = express();
@@ -32,6 +34,7 @@ app.get('/', async (req, res) => {
 
 
 // POST ROUTES
+
 
 
 
