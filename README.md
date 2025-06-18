@@ -78,3 +78,18 @@ DELETE	/plants/:id	Destroy	Deletes a specific plant by its ID
 
 
 ## Happy coding!
+
+
+## Addtl Information To Add
+Description
+Key Features / Recipe Features
+Homepage Image
+Recipes Image (a couple sample images)
+A Search Page Image
+A Select Recipe Show Page Image
+Add Recipe Image
+Tech Stack
+Set Up / Installation Requirements
+Resources Used
+Known Bugs
+License
