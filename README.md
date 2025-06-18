@@ -1,4 +1,4 @@
-# MEN Stack CRUD App Lab
+# MEN Stack CRUD App Lab - Recipes
 ## About
 In this lab, your challenge is to create a complete full-stack application using Node.js, Express, EJS, and MongoDB. Your application will center around a resource or schema of your choosing, for which you will implement full Create, Read, Update, and Delete (CRUD) functionalities. This is an opportunity to apply your understanding of Mongoose, Express, and EJS to a real-world-like scenario.
 
@@ -81,15 +81,15 @@ DELETE	/plants/:id	Destroy	Deletes a specific plant by its ID
 
 
 ## Addtl Information To Add
-Description
-Key Features / Recipe Features
-Homepage Image
-Recipes Image (a couple sample images)
-A Search Page Image
-A Select Recipe Show Page Image
-Add Recipe Image
-Tech Stack
-Set Up / Installation Requirements
-Resources Used
-Known Bugs
-License
+- Description
+- Key Features / Recipe Features
+- Homepage Image
+- Recipes Image (a couple sample images)
+- A Search Page Image
+- A Select Recipe Show Page Image
+- Add Recipe Image
+- Tech Stack
+- Set Up / Installation Requirements
+- Resources Used
+- Known Bugs
+- License
