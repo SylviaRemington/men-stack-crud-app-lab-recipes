@@ -9,8 +9,10 @@ const recipeSchema = new mongoose.Schema({
 });
 
 // Register the model
+// two arguments: database model name with capital letter, and schema to apply to the model
 const Recipe = mongoose.model('Recipe', recipeSchema);
 
 // Export the model
 module.exports = Recipe;
+
 

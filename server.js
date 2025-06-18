@@ -5,6 +5,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 //Do we not need require ejs because express automatically is designed to find it? I think so, but not totally sure.
 
+//Importing the model into server.js
+const Recipe = require('./models/recipes.js')
+
 const app = express();
 
 // MongoDB Connection - connection to the database //also connecting via mongoose gives more feedback vs try catch 
