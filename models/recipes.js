@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 // Creating schema
 const recipeSchema = new mongoose.Schema({
     name: { type: String, required: true, unique: true},
+    category: {type: String, required: true}, //categories like snacks, appetizers, salads, soups, main dishes, desserts, vegan, full-on junk food.
     description: { type: String, required: false},
     ingredients: { type: String, required: true},
     instructions: { type: String, required: true},
