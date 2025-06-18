@@ -4,8 +4,12 @@ const app = express();
 
 const port = 3000; //can add this but not necessary
 
+// app.get('/', async (req, res) => {
+//     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
+// });
+
 app.get('/', async (req, res) => {
-    res.send('Hello, supahstaaaars!');
+    res.render('index.ejs');
 });
 
 app.listen(3000, () => {
