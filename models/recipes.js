@@ -7,6 +7,7 @@ const recipeSchema = new mongoose.Schema({
     description: { type: String, required: false},
     ingredients: { type: String, required: true},
     instructions: { type: String, required: true},
+    isFavoriteRecipe: { type: Boolean, default: false},
 });
 
 // Register the model
