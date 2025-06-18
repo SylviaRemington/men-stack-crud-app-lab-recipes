@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// MongoDB Connection - connection to the database
+// MongoDB Connection - connection to the database //also connecting via mongoose gives more feedback vs try catch 
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
