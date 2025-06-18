@@ -1,8 +1,17 @@
+const dotenv = require('dotenv'); //initializing in JS
+dotenv.config(); //This gives us access to process.evn.MONGODB_URI
+const port = 3000; //can add this but not necessary
 const express = require('express');
+const mongoose = require('mongoose');
 
 const app = express();
 
-const port = 3000; //can add this but not necessary
+// MongoDB Connection - connection to the database
+mongoose.connect(process.env.MONGODB_URI);
+
+mongoose.connection.on('connected', () => {
+    console.log(`Connected to MongoDB ${mongoose.connection.name}`)
+});
 
 // app.get('/', async (req, res) => {
 //     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
