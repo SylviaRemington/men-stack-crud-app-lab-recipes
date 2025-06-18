@@ -3,6 +3,7 @@ dotenv.config(); //This gives us access to process.evn.MONGODB_URI
 const port = 3000; //can add this but not necessary
 const express = require('express');
 const mongoose = require('mongoose');
+//Do we not need require ejs because express automatically is designed to find it? I think so, but not totally sure.
 
 const app = express();
 
