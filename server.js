@@ -4,7 +4,7 @@ const app = express();
 
 const port = 3000; //can add this but not necessary
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     res.send('Hello, supahstaaaars!');
 });
 
