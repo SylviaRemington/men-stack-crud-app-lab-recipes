@@ -23,6 +23,8 @@ mongoose.connection.on('connected', () => {
 
 
 // ROUTES
+
+// TEST ROUTE TO CONFIRM SERVER IS WORKING PROPERLY
 // app.get('/', async (req, res) => {
 //     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
 // });
