@@ -19,7 +19,7 @@ Think creatively and choose a resource that you find engaging and challenging.
 ## Define your schema
 Once you have selected your resource, your next step is to define how this data will be structured in a Mongoose Schema. You need to consider what properties your resource will have and what data types these properties will be.
 
-## Building Your Application
+## Building Your Application - MVP Information
 Minimum Viable Product (MVP):
 
 Your goal is to build an application that allows users to perform complete CRUD operations on your chosen resource through a web interface.
