@@ -82,6 +82,29 @@ app.get('/recipes/new', (req, res) => {
     res.render('recipes/new.ejs');
 });
 
+// GET ROUTE FOR /recipes/:recipeId
+// CREATING DYNAMIC ROUTE FOR SHOWPAGES
+
+// FIRST VERSION BEFORE CHANGED IT TO WHAT I HAVE BELOW THIS
+// app.get("/recipes/:recipeId", (req, res) => {
+//     res.send("Show Page");
+    // res.send(`This route renders the show page for recipe id: ${req.params.recipeId}!`);
+// })
+
+// SECOND VERSION BEFORE CHANGED TO THIRD VERSION BELOW
+// This dynamic get route below is talking to the database, finding id, and showing recipe on the showpage
+// app.get("/recipes/:recipeId", async (req, res) => {
+//   const foundRecipe = await Recipe.findById(req.params.recipeId);
+//   res.send(`This route renders the show page for recipe name: ${foundRecipe.name}!`);
+//   res.render("recipes/show.ejs", { recipe: foundRecipe });
+// });
+
+//THIRD VERSION
+app.get("/recipes/:recipeId", async (req, res) => {
+    const recipeId = req.params.recipeId;
+    const foundRecipe = await Recipe.findById(recipeId);
+    res.render("recipes/show.ejs", { recipe: foundRecipe });
+});
 
 // POST ROUTES
 // Need to set up post method route so that new.ejs can submit html forms
