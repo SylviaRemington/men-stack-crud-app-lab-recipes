@@ -1,3 +1,4 @@
+// IMPORTS
 // ALL IMPORTS AT TOP (with dotenv at the most top so environmental variables working through all of this.)
 const dotenv = require('dotenv'); //initializing in JS
 dotenv.config(); //This gives us access to process.evn.MONGODB_URI
@@ -6,30 +7,31 @@ const express = require('express');
 const mongoose = require('mongoose');
 //Do we not need require ejs because express automatically is designed to find it? I think so, but not totally sure.
 
-
+//IMPORTING MODEL
 //Importing the model into server.js
 const Recipe = require('./models/recipes.js')
 
-// Middleware (goes right after importing the model) - 
-// To access the data in express so can submit form from new.ejs, 
-// we need to use middleware specifically express.urlencoded
-// app.use allows us to plug additional functionality into express. It basically extends the capabilities of our app.
-app.use(express.urlencoded({ extended: false }));
 
-
-
+// CREATING APP
 // Creating the app using Express, so can build out routes, handle requests & send responses
 const app = express();
 
 
+// MONGOOSE CONNECT METHOD
 // MongoDB Connection - connection to the database //also connecting via mongoose gives more feedback vs try catch 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 });
 
-// Middleware - to access the data in express so can submit form from new.ejs, 
+
+// MIDDLEWARE
+// Middleware (put all middleware above any routes) - 
+// To access the data in express so can submit form from new.ejs, 
 // we need to use middleware specifically express.urlencoded
+// app.use allows us to plug additional functionality into express. It basically extends the capabilities of our app.
+app.use(express.urlencoded({ extended: false }));
+
 
 // ROUTES
 
@@ -54,9 +56,15 @@ app.get('/recipes/new', (req, res) => {
 
 
 // POST ROUTES
-// ! Need to set up post method route so that new.ejs can submit html forms
+// Need to set up post method route so that new.ejs can submit html forms
 // Setting up A CREATE ROUTE / we're setting up a post handler for a POST ROUTE
-
+app.post('/recipes', async (req, res) => {
+    console.log(req.body);
+    // Api functions work in async method and need to complete & do something before move on. 
+    // Our api methods need to send something back in order to complete and move onto the next thing. 
+    // Thus res.redirect below:
+    res.redirect("/recipes/new");
+});
 
 
 
