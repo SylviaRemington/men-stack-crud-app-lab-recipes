@@ -45,9 +45,16 @@ app.get('/', async (req, res) => {
     res.render('index.ejs');
 });
 
-app.get("/recipes", (req, res) => {
+
+// app.get("/recipes", (req, res) => {
+//     res.send('Welcome to the index page!');
+// });
+app.get("/recipes", async (req, res) => {
+    const allRecipes = await Recipe.find();
+    console.log(allRecipes);
     res.send('Welcome to the index page!');
 });
+
 
 //Testing the route for the new.ejs page
 // app.get('/recipes/new', (req, res) => {
