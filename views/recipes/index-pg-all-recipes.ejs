@@ -14,7 +14,8 @@ One route to handle the html, and one to handle the form. -->
     <h1>All Recipes</h1>
     <ul>
         <% recipes.forEach(recipe => { %>
-        <li><%= recipe.name %></li>
+        <li><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></li>
+        <!-- updating the recipes to become an a href link for show page -->
         <% }); %>
     </ul>
 
