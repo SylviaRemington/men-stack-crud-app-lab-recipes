@@ -44,8 +44,9 @@ app.get('/recipes/new', (req, res) => {
 });
 
 
-
 // POST ROUTES
+// ! Need to set up post method route so that new.ejs can submit html forms
+// Setting up A CREATE ROUTE / we're setting up a post handler for a POST ROUTE
 
 
 
