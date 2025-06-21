@@ -10,6 +10,13 @@ const mongoose = require('mongoose');
 //Importing the model into server.js
 const Recipe = require('./models/recipes.js')
 
+// Middleware (goes right after importing the model) - 
+// To access the data in express so can submit form from new.ejs, 
+// we need to use middleware specifically express.urlencoded
+// app.use allows us to plug additional functionality into express. It basically extends the capabilities of our app.
+app.use(express.urlencoded({ extended: false }));
+
+
 
 // Creating the app using Express, so can build out routes, handle requests & send responses
 const app = express();
@@ -21,6 +28,8 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 });
 
+// Middleware - to access the data in express so can submit form from new.ejs, 
+// we need to use middleware specifically express.urlencoded
 
 // ROUTES
 
