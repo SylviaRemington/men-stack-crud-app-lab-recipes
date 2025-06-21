@@ -57,7 +57,7 @@ app.get('/recipes/new', (req, res) => {
 app.get('/recipes', async (req, res) => {
     try {
         const allRecipes = await Recipe.find();
-        res.render('recipes/index.ejs', { recipes: allRecipes });
+        res.render('index.ejs', { recipes: allRecipes });
     } catch (err) {
         res.status(500).send('Error loading recipes.');
     }
@@ -88,7 +88,8 @@ app.post('/recipes', async (req, res) => {
         await Recipe.create(req.body);
 
         // Redirect to the recipes list page after saving
-        res.redirect('/recipes');
+        res.redirect('/recipes/new.ejs', { success: true });
+        
     } catch (err) {
         // If something goes wrong (like a missing field), log the error
         console.log('Error saving recipe:', err);

@@ -12,6 +12,11 @@
 <body>
     <h1>Add A New Recipe!</h1>
 
+    <!-- Creating a function for the form when it's completed -->
+    <% if (typeof success !== 'undefined' && success) { %>
+    <p style="color: green;">✅ Complete!</p>
+    <% } %>
+
     <!-- STARTING TO BUILD A FORM HERE BELOW -->
      <form action="/recipes" method="POST">
         <label for="name">Name:</label>
