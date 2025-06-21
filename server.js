@@ -45,17 +45,17 @@ app.get('/', async (req, res) => {
     res.render('index.ejs');
 });
 
-// FIRST VERSION
+// FIRST VERSION of GET ROUTE for /recipes
 // app.get("/recipes", (req, res) => {
 //     res.send('Welcome to the index page!');
 // });
-// SECOND VERSION
+// SECOND VERSION of GET ROUTE for /recipes
     // app.get("/recipes", async (req, res) => {
     //     const allRecipes = await Recipe.find();
     //     console.log(allRecipes);
     //     res.send('Welcome to the index page!');
     // });
-// THIRD VERSION 
+// THIRD VERSION of GET ROUTE for /recipes
     app.get("/recipes", async (req, res) => {
         const allRecipes = await Recipe.find();
         console.log(allRecipes);
@@ -72,6 +72,7 @@ app.get('/recipes', async (req, res) => {
     }
 });
 
+// GET ROUTE FOR /recipes/new
 //Testing the route for the new.ejs page
 // app.get('/recipes/new', (req, res) => {
 //     res.send('This route sends the user to a form page for adding a new yummy recipe!');
@@ -94,6 +95,7 @@ app.get('/recipes/new', (req, res) => {
 //     res.redirect("/recipes/new");
 // });
 
+// POST ROUTE for /recipes
 // This handles the html and posts it from the new.ejs form
 app.post('/recipes', async (req, res) => {
     try {
