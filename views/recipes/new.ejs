@@ -14,7 +14,7 @@
 
     <!-- Creating a function for the form when it's completed -->
     <% if (typeof success !== 'undefined' && success) { %>
-    <p style="color: green;">✅ Complete!</p>
+    <p style="color: green;">✅ Complete! Recipe Submitted!</p>
     <% } %>
 
     <!-- STARTING TO BUILD A FORM HERE BELOW -->
@@ -72,6 +72,11 @@
         <button type="submit">Add Recipe</button>
 
      </form>
+
+         <!-- Creating a function for the form when it's completed -->
+        <% if (typeof success !== 'undefined' && success) { %>
+        <p style="color: green;">✅ Complete! Recipe Submitted!</p>
+        <% } %>
 
 </body>
 </html>
