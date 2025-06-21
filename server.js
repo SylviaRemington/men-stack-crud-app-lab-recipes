@@ -45,11 +45,14 @@ app.get('/', async (req, res) => {
     res.render('index.ejs');
 });
 
+app.get("/recipes", (req, res) => {
+    res.send('Welcome to the index page!');
+});
+
 //Testing the route for the new.ejs page
 // app.get('/recipes/new', (req, res) => {
 //     res.send('This route sends the user to a form page for adding a new yummy recipe!');
 // });
-
 app.get('/recipes/new', (req, res) => {
     res.render('recipes/new.ejs');
 });
