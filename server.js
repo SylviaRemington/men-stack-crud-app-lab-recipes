@@ -88,8 +88,8 @@ app.post('/recipes', async (req, res) => {
         await Recipe.create(req.body);
 
         // Redirect to the recipes list page after saving
-        res.redirect('/recipes/new.ejs', { success: true });
-        
+        res.render('recipes/new.ejs', { success: true });
+
     } catch (err) {
         // If something goes wrong (like a missing field), log the error
         console.log('Error saving recipe:', err);
