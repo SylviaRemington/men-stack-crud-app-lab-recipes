@@ -9,42 +9,50 @@
       <title><%= recipe.name %></title> <!-- Dynamic title based on recipe name -->
   </head>
   <body>
+
     <!-- ENHANCING OUR APPLICATION BY SHOIWING DETAILED INFORMATION ABOUT EACH RECIPE -->
     <!-- <h1>Here Is Your Recipe!</h1> -->
 
-    <!-- DISPLAY SHOWPAGE RECIPE NAME - This is dynamic routing code in Express -->
+
+    <!-- SHOWPAGE RECIPE NAME - This is dynamic routing code in Express -->
     <h1><%= recipe.name %></h1> 
+    <!-- And then add more details about the recipe below here for more detailed showpage info. -->
 
-    <!-- Add more details about the recipe below here -->
 
-    <!-- Showpage recipe category -->
+    <!-- SHOWPAGE RECIPE CATEGORY -->
     <p><strong>Category:</strong> <%= recipe.category %></p>
 
-    <!-- Showpage recipe description if it exists -->
+
+    <!-- SHOWPAGE RECIPE DESCRIPTION -->
     <% if (recipe.description && recipe.description.length > 0) { %>
         <p><strong>Description:</strong> <%= recipe.description %></p>
     <% } %>
 
-    <!-- Showpage recipe ingredients -->
+
+    <!-- SHOWPAGE RECIPE INGREDIENTS -->
     <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
 
-    <!-- Showpage recipe instructions -->
+
+    <!-- SHOWPAGE RECIPE INSTRUCTIONS -->
     <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
 
-    <!-- Conditional rendering for showpage isFavoriteRecipe -->
+
+    <!-- ISFAVORITERECIPE - Conditional rendering for showpage isFavoriteRecipe -->
     <% if (recipe.isFavoriteRecipe) { %>
         <p>🌟 This is one of your favorite recipes!</p>
     <% } else { %>
         <p>This is not marked as a favorite yet.</p>
     <% } %>
 
-    <!-- Conditional rendering for showpage isDelicious -->
+
+    <!-- ISDELICIOUS - Conditional rendering for showpage isDelicious -->
     <% if (recipe.isDelicious) { %>
         <p>😋 You marked this as delicious!</p>
     <% } else { %>
         <p>😐 You didn’t mark this as delicious.</p>
     <% } %>
 
+    
     <!-- Navigation -->
     <br>
     <a href="/recipes">← Back to All Recipes</a>
