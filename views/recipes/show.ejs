@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Show Page</title>
+    <!-- <title>Recipe Show Page</title> -->
+      <title><%= recipe.name %></title> <!-- Dynamic title based on recipe name -->
   </head>
   <body>
-    <h1>Here Is Your Recipe!</h1>
+    <!-- <h1>Here Is Your Recipe!</h1> -->
+    <h1><%= recipe.name %></h1> <!-- Display recipe name -->
+    <!-- Add more details about the recipe here -->
   </body>
 </html>
