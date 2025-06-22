@@ -41,6 +41,8 @@ app.use(express.urlencoded({ extended: false }));
 // });
 
 // GET ROUTES
+
+// OUR HOMEPAGE ROUTE
 app.get('/', async (req, res) => {
     res.render('index.ejs');
 });
@@ -57,6 +59,7 @@ app.get('/', async (req, res) => {
     // });
 // THIRD VERSION of GET ROUTE for /recipes
     app.get("/recipes", async (req, res) => {
+        //gets all the recipes from the database and passes it into the index-pg template, & passes them as something called recipes
         const allRecipes = await Recipe.find();
         console.log(allRecipes);
         res.render('recipes/index-pg-all-recipes.ejs', { recipes: allRecipes });
