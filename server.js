@@ -80,7 +80,7 @@ app.get('/recipes', async (req, res) => {
 // app.get('/recipes/new', (req, res) => {
 //     res.send('This route sends the user to a form page for adding a new yummy recipe!');
 // });
-// This shows us that form from new.ejs
+// This shows us that form from new.ejs //It doesn't fetch any data, just returning our html form file
 app.get('/recipes/new', (req, res) => {
     res.render('recipes/new.ejs');
 });
