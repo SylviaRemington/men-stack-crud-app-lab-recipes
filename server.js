@@ -107,6 +107,7 @@ app.get("/recipes/:recipeId", async (req, res) => {
     const recipeId = req.params.recipeId;
     const foundRecipe = await Recipe.findById(recipeId);
     res.render("recipes/show.ejs", { recipe: foundRecipe });
+    // pass that info from the recipeId from the database to the show page, and pass in the data as something called recipe.
 });
 
 // POST ROUTES

@@ -13,6 +13,7 @@ One route to handle the html, and one to handle the form. -->
 <body>
     <h1>All Recipes</h1>
     <ul>
+        <!-- The recipes (all recipes) are passed into the template here with a forEach loop with a dynamic href attribute on the link.-->
         <% recipes.forEach(recipe => { %>
         <li><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></li>
         <!-- updating the recipes to become an a href link for show page -->
