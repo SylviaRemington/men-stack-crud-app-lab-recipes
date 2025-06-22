@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 //------------------------------------ROUTES-------------------------------------------------------
-
+// ! NEED TO ADD EDIT (PUT) & DELETE (DELETE) ROUTES TO COMPLETE LAB
 // TEST ROUTE TO CONFIRM SERVER IS WORKING PROPERLY
 // app.get('/', async (req, res) => {
 //     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
