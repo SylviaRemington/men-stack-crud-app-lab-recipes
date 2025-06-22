@@ -7,8 +7,47 @@
       <title><%= recipe.name %></title> <!-- Dynamic title based on recipe name -->
   </head>
   <body>
+    <!-- ENHANCING OUR APPLICATION BY SHOIWING DETAILED INFORMATION ABOUT EACH RECIPE -->
     <!-- <h1>Here Is Your Recipe!</h1> -->
-    <h1><%= recipe.name %></h1> <!-- Display recipe name - dynamic routing in Express -->
-    <!-- Add more details about the recipe here -->
+
+    <!-- DISPLAY SHOWPAGE RECIPE NAME - This is dynamic routing code in Express -->
+    <h1><%= recipe.name %></h1> 
+
+    <!-- Add more details about the recipe below here -->
+
+    <!-- Showpage recipe category -->
+    <p><strong>Category:</strong> <%= recipe.category %></p>
+
+    <!-- Showpage recipe description if it exists -->
+    <% if (recipe.description && recipe.description.length > 0) { %>
+        <p><strong>Description:</strong> <%= recipe.description %></p>
+    <% } %>
+
+    <!-- Showpage recipe ingredients -->
+    <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+
+    <!-- Showpage recipe instructions -->
+    <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
+
+    <!-- Conditional rendering for showpage isFavoriteRecipe -->
+    <% if (recipe.isFavoriteRecipe) { %>
+        <p>🌟 This is one of your favorite recipes!</p>
+    <% } else { %>
+        <p>This is not marked as a favorite yet.</p>
+    <% } %>
+
+    <!-- Conditional rendering for showpage isDelicious -->
+    <% if (recipe.isDelicious) { %>
+        <p>😋 You marked this as delicious!</p>
+    <% } else { %>
+        <p>😐 You didn’t mark this as delicious.</p>
+    <% } %>
+
+    <!-- Navigation -->
+    <br>
+    <a href="/recipes">← Back to All Recipes</a>
+
+
   </body>
 </html>
+
