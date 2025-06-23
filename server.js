@@ -128,7 +128,7 @@ app.get("/recipes/:recipeId", async (req, res) => {
 //     res.send(`This is the edit page for ${req.params.recipeId}!`);
 // });
 
-// EDIT - second version of getting edit route
+// EDIT - second version of getting edit route // Now have gotten the recipe from the database
 app.get("/recipes/:recipeId/edit", async (req, res) => {
     const foundRecipe = await Recipe.findById(req.params.recipeId);
     console.log(foundRecipe);
