@@ -138,8 +138,10 @@ app.get("/recipes/:recipeId", async (req, res) => {
 
 // EDIT - third version of getting edit route
 app.get("/recipes/:recipeId/edit", async (req, res) => {
+    //getting the fruit from the database below
     const foundRecipe = await Recipe.findById(req.params.recipeId);
-    //taking that data above and rendering it into a form via edit.ejs
+    // Now,taking that data above and rendering it into a form via edit.ejs & passing in the data
+    // We render out this recipes/edit.ejs, passing in the data.
     res.render("recipes/edit.ejs", {
     recipe: foundRecipe,
   });
