@@ -44,7 +44,7 @@ app.use(methodOverride('_method')); //once we get this working we can comment it
 app.use(morgan('dev'));
 
 //------------------------------------ROUTES-------------------------------------------------------
-// ! NEED TO ADD EDIT (PUT) & DELETE (DELETE) ROUTES TO COMPLETE LAB
+
 // TEST ROUTE TO CONFIRM SERVER IS WORKING PROPERLY
 // app.get('/', async (req, res) => {
 //     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
@@ -168,6 +168,9 @@ app.post('/recipes', async (req, res) => {
 // -------------------------------- PUT ROUTES ----------------------------------------------------
 
 // UPDATING FUNCTIONALITY
+// To update a route, we would need the recipeId, a get route to get the edit page, put route to update it, need to create an update form for UI & make a new ejs, 
+// So need: a form for the UI, we need a way to get to that form via a GET REQUEST, we need a method to respond to submitting the form aka a PUT REQUEST METHOD, & then redirect once completed.
+
 
 
 // -------------------------------- DELETE ROUTES ----------------------------------------------------
