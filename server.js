@@ -123,12 +123,12 @@ app.get("/recipes/:recipeId", async (req, res) => {
     // pass that info from the recipeId from the database to the show page, and pass in the data as something called recipe.
 });
 
-// EDIT - first version before updated it
+// EDIT - first version of getting edit route before updated it
 // app.get("/recipes/:recipeId/edit", (req, res) => {
 //     res.send(`This is the edit page for ${req.params.recipeId}!`);
 // });
 
-// EDIT - second version 
+// EDIT - second version of getting edit route
 app.get("/recipes/:recipeId/edit", async (req, res) => {
     const foundRecipe = await Recipe.findById(req.params.recipeId);
     console.log(foundRecipe);
