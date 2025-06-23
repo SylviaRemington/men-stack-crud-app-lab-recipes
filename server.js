@@ -50,7 +50,9 @@ app.get('/', async (req, res) => {
     res.render('index.ejs'); //sends back some html from index.ejs to populate the homepage
 });
 
+
 // FIRST VERSION of GET ROUTE for /recipes
+// READ PART OF CRUD
 // app.get("/recipes", (req, res) => {
 //     res.send('Welcome to the index page!');
 // });
@@ -62,7 +64,7 @@ app.get('/', async (req, res) => {
     // });
 // THIRD VERSION of GET ROUTE for /recipes
     app.get("/recipes", async (req, res) => {
-        //gets all the recipes from the database and passes it into the index-pg template, & passes them as something called recipes
+        //gets all the recipes from the database and passes it into the index-pg template (READ part of CRUD), & passes them as something called recipes
         const allRecipes = await Recipe.find();
         console.log(allRecipes);
         res.render('recipes/index-pg-all-recipes.ejs', { recipes: allRecipes }); //rendering out the html from that link & its passing data from the mongoDB
@@ -90,6 +92,7 @@ app.get('/recipes/new', (req, res) => {
 
 // GET ROUTE FOR /recipes/:recipeId
 // CREATING DYNAMIC ROUTE FOR SHOWPAGES
+// READ PART OF CRUD
 
 // FIRST VERSION BEFORE CHANGED IT TO WHAT I HAVE BELOW THIS
 // app.get("/recipes/:recipeId", (req, res) => {
