@@ -185,8 +185,13 @@ app.post('/recipes', async (req, res) => {
 
 // Another version could use:
 app.delete("/recipes/:recipeId", async (req, res) => {
+    // get the id of the recipe from the URL (endpoint)
     const recipeId = req.params.recipeId;
+
+    // delete it from the database
     await Recipe.findByIdAndDelete(recipeId);
+
+    // then redirect & go to the /recipes page via GET /recipes
     res.redirect("/recipes");
 });
 
