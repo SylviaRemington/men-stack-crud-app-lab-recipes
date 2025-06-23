@@ -36,7 +36,8 @@ mongoose.connection.on('connected', () => {
 // we need to use middleware specifically express.urlencoded
 // app.use allows us to plug additional functionality into express. It basically extends the capabilities of our app.
 app.use(express.urlencoded({ extended: false }));
-
+app.use(methodOverride('_method')); //once we get this working we can comment it out for post method, etc.
+app.use(morgan('dev'));
 
 //------------------------------------ROUTES-------------------------------------------------------
 // ! NEED TO ADD EDIT (PUT) & DELETE (DELETE) ROUTES TO COMPLETE LAB
