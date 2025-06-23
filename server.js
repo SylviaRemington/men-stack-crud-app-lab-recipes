@@ -1,3 +1,7 @@
+// NOTE TO PURVI: I put a lot of notes on this first app so that I could reference it in the future 
+// in case I forget certain steps or need future clarification. These notes are more for me.
+// I plan on having cleaner code after this lab/lesson (from this point forward).
+
 // SERVER.JS
 // FUNCTIONALITY JS BASIC CODING OF APP, IMPORTS, CREATING APP, CONNECTING TO DB, ROUTES
 
@@ -163,7 +167,7 @@ app.post('/recipes', async (req, res) => {
 
 // -------------------------------- PUT ROUTES ----------------------------------------------------
 
-
+// UPDATING FUNCTIONALITY
 
 
 // -------------------------------- DELETE ROUTES ----------------------------------------------------
