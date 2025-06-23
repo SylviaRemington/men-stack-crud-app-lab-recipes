@@ -9,7 +9,7 @@
 
 <body>
     <h1>Edit <%= recipe.name %></h1>
-    <form action="/recipes" method="POST">
+    <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" />
 
