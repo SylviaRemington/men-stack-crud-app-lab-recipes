@@ -203,6 +203,7 @@ app.post('/recipes', async (req, res) => {
 // });
 
 // second version
+// ! Double check this section to make sure correct & functionality & works
 app.put("/recipes/:recipeId", async (req,res) => {
     const recipeId = req.params.recipeId;
     req.body.isFavoriteRecipe = req.body.isFavoriteRecipe === 'on';
