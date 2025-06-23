@@ -194,11 +194,25 @@ app.post('/recipes', async (req, res) => {
 // To update a route, we would need the recipeId, a get route to get the edit page, put route to update it, need to create an update form for UI & make a new ejs, 
 // So need: a form for the UI, we need a way to get to that form via a GET REQUEST, we need a method to respond to submitting the form aka a PUT REQUEST METHOD, & then redirect once completed.
 
-app.put("/recipes/:recipeId", async (req,res) => {
-    console.log(req.body);
-    res.send('some message');
-});
+// first version
+// app.put("/recipes/:recipeId", async (req,res) => {
+//     console.log(req.body);
+//     req.body.isFavoriteRecipe = req.body.isFavoriteRecipe === 'on';
+//     req.body.isDelicious = req.body.isDelicious === 'on';
+//     res.send('some message');
+// });
 
+// second version
+app.put("/recipes/:recipeId", async (req,res) => {
+    const recipeId = req.params.recipeId;
+    req.body.isFavoriteRecipe = req.body.isFavoriteRecipe === 'on';
+    req.body.isDelicious = req.body.isDelicious === 'on';
+    // res.send('some message');
+
+    await Recipe.findByIdAndUpdate(recipeId, req.body);
+
+    res.redirect(`/recipes/${recipeId}`);
+});
 
 // -------------------------------- DELETE ROUTES ----------------------------------------------------
 
