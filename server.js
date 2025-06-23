@@ -169,9 +169,9 @@ app.post('/recipes', async (req, res) => {
 // -------------------------------- DELETE ROUTES ----------------------------------------------------
 
 // Defining the delete route - done first
-app.delete("/recipes/:recipeId", (req, res) => {
-  res.send("This is the delete route");
-});
+// app.delete("/recipes/:recipeId", (req, res) => {
+//   res.send("This is the delete route");
+// });
 
 // Then with recipe id, we need to find it in the database, and then delete it, 
 // and then after redirect to a new page or confirmation it was deleted.
