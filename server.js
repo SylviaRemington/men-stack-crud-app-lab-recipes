@@ -123,6 +123,10 @@ app.get("/recipes/:recipeId", async (req, res) => {
     // pass that info from the recipeId from the database to the show page, and pass in the data as something called recipe.
 });
 
+app.get("/recipes/:recipeId/edit", (req, res) => {
+    res.send(`This is the edit page for $(req.params.fruitId)!`);
+});
+
 
 // -------------------------------- POST ROUTES ----------------------------------------------------
 

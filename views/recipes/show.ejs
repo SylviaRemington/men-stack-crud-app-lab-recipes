@@ -52,7 +52,7 @@
         <p>😐 You didn’t mark this as delicious.</p>
     <% } %>
 
-    
+
     <br>
 
 
@@ -63,10 +63,21 @@
     <br>
     <br>
 
+    <!-- new edit button or page link here -->
+
+    <!--new page link version <a href="/recipes/<%= recipe._id %>/edit">Edit <%= recipe.name %></a> -->
+    
+    <!-- new edit button -->
+    <form action="/recipes/<%= recipe._id %>/edit" method="GET">
+      <button type="submit" style="background-color: rgb(161, 223, 220)">Edit <%= recipe.name %></button>
+    </form>
+
+    <br>
+
     <!-- new delete button -->
     <!-- question mark equals a query string -->
     <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
-      <button type="submit">Delete <%= recipe.name %></button>
+      <button type="submit" style="background-color: lightgrey">Delete <%= recipe.name %></button>
     </form>
 
 
