@@ -96,5 +96,6 @@ DELETE	/plants/:id	Destroy	Deletes a specific plant by its ID
 
 
 ## By end of lab/lesson, my app should have all of these routes created for MVP
-![Table of Routes] (images/RESTful Routes - app should have all of these.png)
+![Table of Routes] (images/RESTfulroutes.png)
+
 
