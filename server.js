@@ -168,11 +168,27 @@ app.post('/recipes', async (req, res) => {
 
 // -------------------------------- DELETE ROUTES ----------------------------------------------------
 
+// Defining the delete route - done first
 app.delete("/recipes/:recipeId", (req, res) => {
   res.send("This is the delete route");
 });
 
+// Then with recipe id, we need to find it in the database, and then delete it, 
+// and then after redirect to a new page or confirmation it was deleted.
 
+// Creating the delete route functionality
+// One Version:
+// app.delete("/recipes/:recipeId", async (req, res) => {
+//   await Recipe.findByIdAndDelete(req.params.recipeId);
+//   res.redirect("/recipes");
+// });
+
+// Another version could use:
+app.delete("/recipes/:recipeId", async (req, res) => {
+    const recipeId = req.params.recipeId;
+    await Recipe.findByIdAndDelete(recipeId);
+    res.redirect("/recipes");
+});
 
 
 // --------------Starts the app and tells it to listen for requests on PORT (3000)-----------------
