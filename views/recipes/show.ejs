@@ -52,17 +52,23 @@
         <p>😐 You didn’t mark this as delicious.</p>
     <% } %>
 
+    
+    <br>
+
 
     <!-- Navigation -->
 
+    <a href="/recipes">← Back to All Recipes</a>
+
+    <br>
+    <br>
+
     <!-- new delete button -->
+    <!-- question mark equals a query string -->
     <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
       <button type="submit">Delete <%= recipe.name %></button>
     </form>
 
-    <br>
-
-    <a href="/recipes">← Back to All Recipes</a>
 
   </body>
 </html>

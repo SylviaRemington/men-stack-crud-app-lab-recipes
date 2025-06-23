@@ -168,6 +168,10 @@ app.post('/recipes', async (req, res) => {
 
 // -------------------------------- DELETE ROUTES ----------------------------------------------------
 
+app.delete("/recipes/:recipeId", (req, res) => {
+  res.send("This is the delete route");
+});
+
 
 
 
