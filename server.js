@@ -129,10 +129,20 @@ app.get("/recipes/:recipeId", async (req, res) => {
 // });
 
 // EDIT - second version of getting edit route // Now have gotten the recipe from the database
+// GET localhost:3000/recipes/:recipeId/edit
+// app.get("/recipes/:recipeId/edit", async (req, res) => {
+//     const foundRecipe = await Recipe.findById(req.params.recipeId);
+//     console.log(foundRecipe);
+//     res.send(`This is the edit route for ${foundRecipe.name}`);
+// });
+
+// EDIT - third version of getting edit route
 app.get("/recipes/:recipeId/edit", async (req, res) => {
     const foundRecipe = await Recipe.findById(req.params.recipeId);
-    console.log(foundRecipe);
-    res.send(`This is the edit route for ${foundRecipe.name}`);
+    //taking that data above and rendering it into a form via edit.ejs
+    res.render("recipes/edit.ejs", {
+    recipe: foundRecipe,
+  });
 });
 
 // -------------------------------- POST ROUTES ----------------------------------------------------
