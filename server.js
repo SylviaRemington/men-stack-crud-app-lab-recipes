@@ -43,7 +43,7 @@ app.use(express.urlencoded({ extended: false }));
 //     res.send('Hello, supahstaaaars!'); //Checking if communicating with browser is working.
 // });
 
-// GET ROUTES
+// -------------------------------- GET ROUTES ----------------------------------------------------
 
 // OUR HOMEPAGE ROUTE
 app.get('/', async (req, res) => {
@@ -116,6 +116,9 @@ app.get("/recipes/:recipeId", async (req, res) => {
     // pass that info from the recipeId from the database to the show page, and pass in the data as something called recipe.
 });
 
+
+// -------------------------------- POST ROUTES ----------------------------------------------------
+
 // POST ROUTES
 // Need to set up post method route so that new.ejs can submit html forms
 // Setting up A CREATE ROUTE / we're setting up a post handler for a POST ROUTE
@@ -153,6 +156,16 @@ app.post('/recipes', async (req, res) => {
         res.status(500).send('Something went wrong while saving the recipe.');
     }
 });
+
+
+// -------------------------------- PUT ROUTES ----------------------------------------------------
+
+
+
+
+// -------------------------------- DELETE ROUTES ----------------------------------------------------
+
+
 
 
 // --------------Starts the app and tells it to listen for requests on PORT (3000)-----------------
