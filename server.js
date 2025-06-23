@@ -124,7 +124,8 @@ app.get("/recipes/:recipeId", async (req, res) => {
 });
 
 app.get("/recipes/:recipeId/edit", (req, res) => {
-    res.send(`This is the edit page for $(req.params.fruitId)!`);
+    // const fruitId = req.params.fruitId
+    res.send(`This is the edit page for ${req.params.recipeId}!`);
 });
 
 
