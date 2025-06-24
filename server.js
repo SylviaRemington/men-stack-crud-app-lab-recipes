@@ -1,3 +1,4 @@
+
 // NOTE TO PURVI: I put a lot of notes on this first app so that I could reference it in the future 
 // in case I forget certain steps or need future clarification. These notes are more for me.
 // I plan on having cleaner code after this lab/lesson (from this point forward).
