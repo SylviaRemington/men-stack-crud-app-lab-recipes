@@ -19,7 +19,7 @@
             <!-- For this category area, maybe make it a dropdown menu with 7 areas to select from (e.g. italian, snack, main dish, etc) -->
             <label for="category">Category:</label> 
             <!-- <input type="text" name="category" id="category"> -->
-            <select name="category" id="category">
+            <select name="category" id="category" value="<%= category.name %>">
                 <option value="blank"></option>
                 <option value="snacks">Snacks</option>
                 <option value="dessert">Dessert</option>
@@ -38,13 +38,13 @@
             <br>
 
             <label for="ingredients">Ingredients:</label>
-            <input type="text" name="ingredients" id="ingredients">
+            <input type="text" name="ingredients" id="ingredients" value="<%= ingredients.name %>">
 
             <br>
             <br>
 
             <label for="instructions">Instructions:</label>
-            <input type="text" name="instructions" id="instructions">
+            <input type="text" name="instructions" id="instructions" value="<%= instructions.name %>">
 
             <br>
             <br>
