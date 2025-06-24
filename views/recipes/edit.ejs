@@ -21,7 +21,7 @@
             <!-- First Version - incorrect and not complete -->
             <!-- <label for="category">Category:</label>  -->
             <!-- <input type="text" name="category" id="category"> -->
-            <!-- <select name="category" id="category" value="<%= category.name %>">
+            <!-- <select name="category" id="category" value="<%= recipe.category %>">
                 <option value="blank"></option>
                 <option value="snacks">Snacks</option>
                 <option value="dessert">Dessert</option>
@@ -42,41 +42,34 @@
             <br>
 
             <label for="description">Description:</label>
-            <!-- <input type="text" name="description" id="description" value="<%= description.name %>" /> -->
             <input type="text" name="description" id="description" value="<%= recipe.description %>" />
-            <!-- ! just adding value= for each and changing out the label name -->
 
             <br>
             <br>
 
             <label for="ingredients">Ingredients:</label>
-            <!-- <input type="text" name="ingredients" id="ingredients" value="<%= ingredients.name %>"> -->
             <input type="text" name="ingredients" id="ingredients" value="<%= recipe.ingredients %>">
 
             <br>
             <br>
 
             <label for="instructions">Instructions:</label>
-            <input type="text" name="instructions" id="instructions" value="<%= instructions.name %>">
+            <input type="text" name="instructions" id="instructions" value="<%= recipe.instructions %>">
 
             <br>
             <br>
 
             <label for="isFavoriteRecipe">Is this one of your favorite recipes? If yes, click button:</label>
-            <input type="checkbox" name="isFavoriteRecipe" id="isFavoriteRecipe" checked>
-            <!-- ! Need to make this more dynamic with ejs icecream cone thing so that it is conditional with what is in the database -->
-            <!-- if (condition) { %>checked<% } etc etc etc -->
-            // also from slack chat this from fruits lesson: 
-            // <input type="checkbox" name="isReadyToEat" <%- fruit.isReadyToEat ? 'checked' : '' %>>
-            // above is a ternary statement in ejs
+            <!-- <input type="checkbox" name="isFavoriteRecipe" id="isFavoriteRecipe" checked> -->
+             <input type="checkbox" name="isFavoriteRecipe" id="isFavoriteRecipe"
+             <% if (recipe.isFavoriteRecipe) { %>checked<% } %>>
 
             <br>
             <br>
 
             <label for="isDelicious">Is Delicious?</label>
-            <input type="checkbox" name="isDelicious" id="isDelicious" checked>
-            <!-- ! Need to make this more dynamic so that it is conditional with what is in the database -->
-
+            <input type="checkbox" name="isDelicious" id="isDelicious"
+            <% if (recipe.isDelicious) { %>checked<% } %>>
             <br>
             <br>
 
