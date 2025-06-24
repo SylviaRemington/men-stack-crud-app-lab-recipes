@@ -5,6 +5,7 @@
 // SERVER.JS
 // FUNCTIONALITY JS BASIC CODING OF APP, IMPORTS, CREATING APP, CONNECTING TO DB, ROUTES
 
+
 // -----------------------------IMPORTS------------------------------------------------------------
 // ALL IMPORTS AT TOP (with dotenv at the most top so environmental variables working through all of this.)
 const dotenv = require('dotenv'); //initializing in JS
