@@ -17,14 +17,25 @@
             <br>
 
             <!-- For this category area, maybe make it a dropdown menu with 7 areas to select from (e.g. italian, snack, main dish, etc) -->
-            <label for="category">Category:</label> 
+            
+            <!-- First Version - incorrect and not complete -->
+            <!-- <label for="category">Category:</label>  -->
             <!-- <input type="text" name="category" id="category"> -->
-            <select name="category" id="category" value="<%= category.name %>">
+            <!-- <select name="category" id="category" value="<%= category.name %>">
                 <option value="blank"></option>
                 <option value="snacks">Snacks</option>
                 <option value="dessert">Dessert</option>
                 <option value="main-dish">Main Dish</option>
                 <option value="other">Other</option>
+            </select> -->
+
+            <!-- Second Version -->
+            <select name="category" id="category">
+                <option value="blank" <% if (recipe.category === 'blank') { %>selected<% } %>>Select a category</option>
+                <option value="snacks" <% if (recipe.category === 'snacks') { %>selected<% } %>>Snacks</option>
+                <option value="dessert" <% if (recipe.category === 'dessert') { %>selected<% } %>>Dessert</option>
+                <option value="main-dish" <% if (recipe.category === 'main-dish') { %>selected<% } %>>Main Dish</option>
+                <option value="other" <% if (recipe.category === 'other') { %>selected<% } %>>Other</option>
             </select>
         
             <br>
