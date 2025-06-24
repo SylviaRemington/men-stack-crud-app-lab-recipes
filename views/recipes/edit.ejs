@@ -42,14 +42,16 @@
             <br>
 
             <label for="description">Description:</label>
-            <input type="text" name="description" id="description" value="<%= description.name %>" />
+            <!-- <input type="text" name="description" id="description" value="<%= description.name %>" /> -->
+            <input type="text" name="description" id="description" value="<%= recipe.description %>" />
             <!-- ! just adding value= for each and changing out the label name -->
 
             <br>
             <br>
 
             <label for="ingredients">Ingredients:</label>
-            <input type="text" name="ingredients" id="ingredients" value="<%= ingredients.name %>">
+            <!-- <input type="text" name="ingredients" id="ingredients" value="<%= ingredients.name %>"> -->
+            <input type="text" name="ingredients" id="ingredients" value="<%= recipe.ingredients %>">
 
             <br>
             <br>
